@@ -9,7 +9,7 @@ using WebStore.Data;
 using WebStore.Domain.Entities.Identity;
 using WebStore.Domain.Models;
 using WebStore.Domain.ViewModels;
-using WebStore.Infrastructure.Interfaces;
+using Webstore.Interfaces.Services;
 
 namespace WebStore.Controllers
 {
