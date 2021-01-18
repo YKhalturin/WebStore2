@@ -9,12 +9,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using WebStore.DAL.Context;
-using WebStore.Data;
 using WebStore.Domain.Entities.Identity;
-using WebStore.Infrastructure.Services.InCookies;
-using WebStore.Infrastructure.Services.InMemory;
-using WebStore.Infrastructure.Services.InSQL;
 using Webstore.Interfaces.Services;
+using Webstore.Services.Data;
+using Webstore.Services.Products.InCookies;
+using Webstore.Services.Products.InMemory;
+using Webstore.Services.Products.InSQL;
 
 namespace WebStore
 {

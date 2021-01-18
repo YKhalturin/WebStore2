@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+﻿using System.Linq;
 using Microsoft.AspNetCore.Http;
-
 using Newtonsoft.Json;
 using WebStore.Domain;
 using WebStore.Domain.Entities;
 using WebStore.Domain.ViewModels;
-using WebStore.Infrastructure.Mapping;
 using Webstore.Interfaces.Services;
+using Webstore.Services.Mapping;
 
-namespace WebStore.Infrastructure.Services.InCookies
+namespace Webstore.Services.Products.InCookies
 {
     public class InCookiesCartService : ICartService
     {
