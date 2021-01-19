@@ -18,14 +18,15 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Common\WebStore.Domain\WebStore.Domain.csproj" />
-    <ProjectReference Include="..\..\Services\WebStore.DAL\WebStore.DAL.csproj" />
-    <ProjectReference Include="..\..\Services\Webstore.Interfaces\Webstore.Interfaces.csproj" />
-    <ProjectReference Include="..\..\Services\Webstore.Services\Webstore.Services.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Services\Webstore.Clients\Webstore.Clients.csproj" />
+		<ProjectReference Include="..\..\Services\WebStore.DAL\WebStore.DAL.csproj" />
+		<ProjectReference Include="..\..\Common\WebStore.Domain\WebStore.Domain.csproj" />
+		<ProjectReference Include="..\..\Services\WebStore.Interfaces\WebStore.Interfaces.csproj" />
+		<ProjectReference Include="..\..\Services\WebStore.Services\WebStore.Services.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
