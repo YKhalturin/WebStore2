@@ -7,10 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Webstore.Clients.Values;
 using WebStore.DAL.Context;
 using WebStore.Domain.Entities.Identity;
 using Webstore.Interfaces.Services;
+using Webstore.Interfaces.TestAPI;
 using Webstore.Services.Data;
 using Webstore.Services.Products.InCookies;
 using Webstore.Services.Products.InMemory;
@@ -74,14 +75,11 @@ namespace WebStore
             services.AddTransient<IProductData, SqlProductData>();
             services.AddScoped<ICartService, InCookiesCartService>();
             services.AddScoped<IOrderService, SqlOrderService>();
+            services.AddScoped<IValuesServices, ValuesClient>();
 
-            //services.AddMvc(opt => opt.Conventions.Add(new WebStoreControllerConvention()));
             services
-               .AddControllersWithViews(opt =>
-                {
-                    //opt.Conventions.Add(new WebStoreControllerConvention());
-                })
-               .AddRazorRuntimeCompilation();
+                .AddControllersWithViews()
+                .AddRazorRuntimeCompilation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, WebStoreDbInitializer db)
@@ -101,17 +99,6 @@ namespace WebStore
             app.UseAuthentication();
             
             app.UseAuthorization();
-
-            //app.UseMiddleware<TestMiddleware>();
-            //app.UseMiddleware(typeof(TestMiddleware));
-
-            //app.Map(
-            //    "/Hello", 
-            //    context => context.Run(async request => await request.Response.WriteAsync("Hello World!")));
-
-            //app.MapWhen(
-            //    context => context.Request.Query.ContainsKey("id") && context.Request.Query["id"] == "5",
-            //    context => context.Run(async request => await request.Response.WriteAsync("Hello World with id:5!")));
 
             app.UseWelcomePage("/welcome");
 
