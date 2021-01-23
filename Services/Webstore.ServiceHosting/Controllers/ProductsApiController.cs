@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using WebStore.Domain;
-using WebStore.Domain.Entities;
+using WebStore.Domain.DTO.Products;
 using Webstore.Interfaces.Services;
 
 namespace Webstore.ServiceHosting.Controllers
@@ -19,22 +15,22 @@ namespace Webstore.ServiceHosting.Controllers
         public ProductsApiController(IProductData ProductData) => _ProductData = ProductData;
 
         [HttpGet("sections")] // http://localhost:5000/api/products/sections
-        public IEnumerable<Section> GetSections() => _ProductData.GetSections();
+        public IEnumerable<SectionDTO> GetSections() => _ProductData.GetSections();
 
         [HttpGet("sections/{id}")] // http://localhost:5000/api/products/sections/5
-        public Section GetSectionById(int id) => _ProductData.GetSectionById(id);
+        public SectionDTO GetSectionById(int id) => _ProductData.GetSectionById(id);
 
         [HttpGet("brands")] // http://localhost:5000/api/products/brands
-        public IEnumerable<Brand> GetBrands() => _ProductData.GetBrands();
+        public IEnumerable<BrandDTO> GetBrands() => _ProductData.GetBrands();
 
         [HttpGet("brands/{id}")] // http://localhost:5000/api/products/brands/5
-        public Brand GetBrandById(int id) => _ProductData.GetBrandById(id);
+        public BrandDTO GetBrandById(int id) => _ProductData.GetBrandById(id);
 
         [HttpPost]
-        public IEnumerable<Product> GetProducts([FromBody] ProductFilter Filter) => _ProductData.GetProducts(Filter);
+        public IEnumerable<ProductDTO> GetProducts([FromBody] ProductFilter Filter) => _ProductData.GetProducts(Filter);
 
         [HttpGet("{id}")] // http://localhost:5000/api/products/5
-        public Product GetProductById(int id) => _ProductData.GetProductById(id);
+        public ProductDTO GetProductById(int id) => _ProductData.GetProductById(id);
 
     }
 }
