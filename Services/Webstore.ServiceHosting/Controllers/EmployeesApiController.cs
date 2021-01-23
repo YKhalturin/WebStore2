@@ -6,12 +6,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using WebStore.Domain.Models;
+using Webstore.Interfaces;
 using Webstore.Interfaces.Services;
 
 namespace Webstore.ServiceHosting.Controllers
 {
     //[Route("api/[controller]")] // [controller] = EmployeesApi
-    [Route("api/employees")]
+    [Route(WebAPI.Employees)]
     [ApiController]
     public class EmployeesApiController : ControllerBase, IEmployeesData
     {
