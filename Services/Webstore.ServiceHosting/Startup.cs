@@ -1,15 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebStore.DAL.Context;
@@ -18,7 +13,6 @@ using Webstore.Interfaces.Services;
 using Webstore.Services.Data;
 using Webstore.Services.Products.InCookies;
 using Webstore.Services.Products.InMemory;
-using Webstore.Services.Products.InSQL;
 using WebStore.Services.Products.InSQL;
 
 namespace Webstore.ServiceHosting
