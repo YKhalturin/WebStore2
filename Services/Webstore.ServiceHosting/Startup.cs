@@ -1,12 +1,12 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using WebStore.DAL.Context;
 using WebStore.Domain.Entities.Identity;
 using Webstore.Interfaces.Services;
@@ -15,18 +15,14 @@ using Webstore.Services.Products.InCookies;
 using Webstore.Services.Products.InMemory;
 using WebStore.Services.Products.InSQL;
 
-namespace Webstore.ServiceHosting
+namespace WebStore.ServiceHosting
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        public Startup(IConfiguration configuration) => Configuration = configuration;
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<WebStoreDB>(
@@ -34,8 +30,8 @@ namespace Webstore.ServiceHosting
             services.AddTransient<WebStoreDbInitializer>();
 
             services.AddIdentity<User, Role>()
-                .AddEntityFrameworkStores<WebStoreDB>()
-                .AddDefaultTokenProviders();
+               .AddEntityFrameworkStores<WebStoreDB>()
+               .AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(opt =>
             {
@@ -57,9 +53,9 @@ namespace Webstore.ServiceHosting
 
             services.AddScoped<IEmployeesData, InMemoryEmployeesData>();
             services
-                .AddScoped<IProductData, SqlProductData>()
-                .AddScoped<ICartService, InCookiesCartService>()
-                .AddScoped<IOrderService, SqlOrderService>();
+               .AddScoped<IProductData, SqlProductData>()
+               .AddScoped<ICartService, InCookiesCartService>()
+               .AddScoped<IOrderService, SqlOrderService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -68,7 +64,6 @@ namespace Webstore.ServiceHosting
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
