@@ -40,7 +40,8 @@ namespace Webstore.ServiceHosting.Controllers
         public ActionResult Post([FromBody] string value)
         {
             __Values.Add(value);
-            return Ok();
+            var id = __Values.Count - 1;
+            return CreatedAtAction(nameof(Get), new { id });
         }
 
         [HttpPut("{id}")]
