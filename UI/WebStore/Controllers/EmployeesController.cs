@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WebStore.Domain.Entities;
 using WebStore.Domain.Entities.Identity;
-using WebStore.Domain.Models;
 using WebStore.Domain.ViewModels;
 using Webstore.Interfaces.Services;
 

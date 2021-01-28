@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+ /Services/Webstore.ServiceHosting/Webstore.ServiceHosting.xml
+/Common/WebStore.Domain/WebStore.Domain.xml

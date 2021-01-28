@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebStore.Domain.Models;
+using WebStore.Domain.Entities;
 using Webstore.Interfaces;
 using Webstore.Interfaces.Services;
 
