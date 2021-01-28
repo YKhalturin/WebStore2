@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 
-namespace Webstore.Clients.Base
+namespace WebStore.Clients.Base
 {
     public abstract class BaseClient : IDisposable
     {

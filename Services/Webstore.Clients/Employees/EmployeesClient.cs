@@ -2,7 +2,7 @@
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Webstore.Clients.Base;
+using WebStore.Clients.Base;
 using WebStore.Domain.Models;
 using Webstore.Interfaces;
 using Webstore.Interfaces.Services;
