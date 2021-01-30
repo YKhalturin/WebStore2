@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
-using Webstore.Clients.Base;
+using WebStore.Clients.Base;
 using WebStore.Domain;
 using WebStore.Domain.DTO.Products;
 using Webstore.Interfaces;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
-using Webstore.Clients.Base;
+using WebStore.Clients.Base;
 using Webstore.Interfaces;
 using Webstore.Interfaces.TestAPI;
 

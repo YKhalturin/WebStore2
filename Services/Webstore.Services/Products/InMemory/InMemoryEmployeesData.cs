@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using WebStore.Domain.Models;
+using WebStore.Domain.Entities;
 using Webstore.Interfaces.Services;
 using Webstore.Services.Data;
 

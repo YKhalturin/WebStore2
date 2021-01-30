@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Webstore.Clients.Base;
+using WebStore.Clients.Base;
 using WebStore.Domain.DTO.Orders;
 using Webstore.Interfaces;
 using Webstore.Interfaces.Services;
