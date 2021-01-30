@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Webstore.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Webstore.ServiceHosting.Controllers
 {
-    [Route("api/[controller]")] // http://localhost:5001/api/values
+    [Route(WebAPI.Values)] // http://localhost:5001/api/values
     [ApiController]
     public class ValuesController : ControllerBase
     {
