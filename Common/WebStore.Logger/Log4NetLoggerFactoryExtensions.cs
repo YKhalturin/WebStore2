@@ -25,7 +25,7 @@ namespace WebStore.Logger
             return Factory;
         }
 
-    //    public static ILoggingBuilder AddLog4Net(this ILoggingBuilder Builder, string ConfigurationFile = "log4net.config") =>
-    //        Builder.AddProvider(new Log4NetLoggerProvider(CheckFilePath(ConfigurationFile)));
+        public static ILoggingBuilder AddLog4Net(this ILoggingBuilder Builder, string ConfigurationFile = "log4net.config") =>
+            Builder.AddProvider(new Log4NetLoggerProvider(CheckFilePath(ConfigurationFile)));
     }
 }
