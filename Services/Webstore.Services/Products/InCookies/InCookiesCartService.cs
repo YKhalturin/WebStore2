@@ -7,7 +7,7 @@ using WebStore.Domain.ViewModels;
 using Webstore.Interfaces.Services;
 using WebStore.Services.Mapping;
 
-namespace Webstore.Services.Products.InCookies
+namespace WebStore.Services.Products.InCookies
 {
     public class InCookiesCartService : ICartService
     {
@@ -58,7 +58,7 @@ namespace Webstore.Services.Products.InCookies
             var item = cart.Items.FirstOrDefault(i => i.ProductId == id);
 
             if (item is null)
-                cart.Items.Add(new CartItem {ProductId = id, Quantity = 1});
+                cart.Items.Add(new CartItem { ProductId = id, Quantity = 1 });
             else
                 item.Quantity++;
 
@@ -70,7 +70,7 @@ namespace Webstore.Services.Products.InCookies
             var cart = Cart;
             var item = cart.Items.FirstOrDefault(i => i.ProductId == id);
 
-            if(item is null) return;
+            if (item is null) return;
 
             if (item.Quantity > 0)
                 item.Quantity--;
