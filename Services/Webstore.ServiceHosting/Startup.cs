@@ -12,7 +12,7 @@ using WebStore.DAL.Context;
 using WebStore.Domain.Entities.Identity;
 using Webstore.Interfaces.Services;
 using Webstore.Services.Data;
-using Webstore.Services.Products.InCookies;
+using WebStore.Services.Products.InCookies;
 using Webstore.Services.Products.InMemory;
 using WebStore.Services.Products.InSQL;
 

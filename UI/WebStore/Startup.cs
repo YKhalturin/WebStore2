@@ -17,7 +17,6 @@ using WebStore.Interfaces.Services;
 using Webstore.Interfaces.TestAPI;
 using WebStore.Logger;
 using WebStore.Services.Products;
-using Webstore.Services.Products.InCookies;
 using WebStore.Services.Products.InCookies;
 
 namespace WebStore
