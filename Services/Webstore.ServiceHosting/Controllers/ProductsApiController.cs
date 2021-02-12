@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using WebStore.Domain;
 using WebStore.Domain.DTO.Products;
 using Webstore.Interfaces;
+using WebStore.Interfaces;
 using Webstore.Interfaces.Services;
+using WebStore.Interfaces.Services;
 
-namespace Webstore.ServiceHosting.Controllers
+namespace WebStore.ServiceHosting.Controllers
 {
     [Route(WebAPI.Products)]
     [ApiController]
@@ -28,10 +30,9 @@ namespace Webstore.ServiceHosting.Controllers
         public BrandDTO GetBrandById(int id) => _ProductData.GetBrandById(id);
 
         [HttpPost]
-        public IEnumerable<ProductDTO> GetProducts([FromBody] ProductFilter Filter) => _ProductData.GetProducts(Filter);
+        public PageProductsDTO GetProducts([FromBody] ProductFilter Filter) => _ProductData.GetProducts(Filter);
 
         [HttpGet("{id}")] // http://localhost:5000/api/products/5
         public ProductDTO GetProductById(int id) => _ProductData.GetProductById(id);
-
     }
 }
