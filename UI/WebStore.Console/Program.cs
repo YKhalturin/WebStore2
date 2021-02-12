@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Webstore;
@@ -29,7 +28,7 @@ namespace WebStore.Console
 
             var pp = products_client.GetProducts();
 
-            foreach (var product in pp)
+            foreach (var product in pp.Products)
                 System.Console.WriteLine(product.Name);
 
 
