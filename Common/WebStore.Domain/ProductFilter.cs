@@ -7,5 +7,9 @@
         public int? BrandId { get; set; }
         
         public int[] Ids { get; set; }
+
+        public int Page { get; init; }
+
+        public int? PageSize { get; init; }
     }
 }
